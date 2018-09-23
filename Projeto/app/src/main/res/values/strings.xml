@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Projeto</string>
+    <string name="sobre">Sobre</string>
+    <string name="tema">Tema</string>
+    <string name="petshop">Petshop</string>
+    <string name="objetivo">Objetivo</string>
+    <string name="objetivo_content">Objetivo</string>
+    <string name="desenvolvedores">Desenvolvedores</string>
+    <string name="nome_leandro">Leandro Augusto Mioto da Silva</string>
+    <string name="ra_leandro">2840481713020</string>
+    <string name="nome_leonardo">Leonardo Abaque Coelho</string>
+    <string name="ra_leonardo">2840481713021</string>
 </resources>
