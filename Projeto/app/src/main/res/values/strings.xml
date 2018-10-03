@@ -1,6 +1,19 @@
 <resources>
     <string name="app_name">Projeto</string>
-    <string name="sobre">Sobre</string>
+    <!-- Strings related to login page -->
+    <string name="prompt_email">E-mail</string>
+    <string name="prompt_password">Senha</string>
+    <string name="action_sign_in">Entrar ou Registrar</string>
+    <string name="action_sign_in_short">Entrar</string>
+    <string name="error_invalid_email">Esse endereço de email é inválido.</string>
+    <string name="error_invalid_password">Essa senha é muito pequena</string>
+    <string name="error_incorrect_password">Essa senha está incorreta</string>
+    <string name="error_field_required">Este campo é obrigatório</string>
+    <string name="permission_rationale">"Permissões de Contato são necessárias para possibilitar completar e-mails."</string>
+    <string name="action_register">Registrar</string>
+    <string name="action_sobre">Sobre</string>
+
+    <!-- Strings related to sobre page -->
     <string name="tema">Tema</string>
     <string name="petshop">Petshop</string>
     <string name="objetivo">Objetivo</string>
@@ -11,4 +24,14 @@
     <string name="ra_leandro">2840481713020</string>
     <string name="nome_leonardo">Leonardo Abaque Coelho</string>
     <string name="ra_leonardo">2840481713021</string>
+
+    <!-- Strings related to menu -->
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="title_activity_menu">MenuActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Nosso Petshop</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
 </resources>
