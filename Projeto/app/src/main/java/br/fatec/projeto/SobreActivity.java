@@ -10,6 +10,7 @@ public class SobreActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sobre);
 
+        // Colocar setinha pra voltar na tela sobre
         getSupportActionBar().setTitle("Sobre");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }

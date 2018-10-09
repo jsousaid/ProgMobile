@@ -36,28 +36,29 @@ import java.util.List;
 import static android.Manifest.permission.READ_CONTACTS;
 
 /**
- * A login screen that offers login via email/password.
+ * Uma tela de login que ofere login via email/senha.
  */
 public class MainActivity extends AppCompatActivity implements LoaderCallbacks<Cursor> {
 
     /**
      * Id to identity READ_CONTACTS permission request.
+     * Não entendi isso aqui
      */
     private static final int REQUEST_READ_CONTACTS = 0;
 
     /**
-     * A dummy authentication store containing known user names and passwords.
-     * TODO: remove after connecting to a real authentication system.
+     * Uma autenticação falsa que armazena usuários e senhas conhecidos.
+     * A fazer: remover depois de conectar com um sistema de autenticação real.
      */
     private static final String[] DUMMY_CREDENTIALS = new String[]{
-            "foo@example.com:hello", "bar@example.com:world"
+            "foo@exemplo.com:hello", "bar@example.com:world", "usuario@usuario.com:senha"
     };
     /**
-     * Keep track of the login task to ensure we can cancel it if requested.
+     * Manter rastreamento da tarefa de login para garantir que poderemos cancelar se necessario
      */
     private UserLoginTask mAuthTask = null;
 
-    // UI references.
+    // Referências da interface do usuário.
     private AutoCompleteTextView mEmailView;
     private EditText mPasswordView;
     private View mProgressView;
@@ -67,7 +68,7 @@ public class MainActivity extends AppCompatActivity implements LoaderCallbacks<C
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        // Set up the login form.
+        // Configurar o formulário de login
         mEmailView = (AutoCompleteTextView) findViewById(R.id.email);
         populateAutoComplete();
 
@@ -95,6 +96,7 @@ public class MainActivity extends AppCompatActivity implements LoaderCallbacks<C
         sobreButton.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
+                // Criar a intent para a página sobre caso clique no botão sobre
                 Intent sobreIntent = new Intent(getApplicationContext(), SobreActivity.class);
                 startActivity(sobreIntent);
             }
@@ -135,7 +137,7 @@ public class MainActivity extends AppCompatActivity implements LoaderCallbacks<C
     }
 
     /**
-     * Callback received when a permissions request has been completed.
+     * Função chamada quando uma requisição de permissao foi completa.
      */
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions,
@@ -148,34 +150,34 @@ public class MainActivity extends AppCompatActivity implements LoaderCallbacks<C
     }
 
     /**
-     * Attempts to sign in or register the account specified by the login form.
-     * If there are form errors (invalid email, missing fields, etc.), the
-     * errors are presented and no actual login attempt is made.
+     * Tentar logar ou registrar a conta especificada no formulario de login.
+     * Se existem erros no formulário (e-mail inválido, campos em branco, etc), os erros
+     * são apresentado e nenhum folgin é feito.
      */
     private void attemptLogin() {
         if (mAuthTask != null) {
             return;
         }
 
-        // Reset errors.
+        // Redefinir os erros
         mEmailView.setError(null);
         mPasswordView.setError(null);
 
-        // Store values at the time of the login attempt.
+        // Armazenar os valores  no momento da tentativa de login.
         String email = mEmailView.getText().toString();
         String password = mPasswordView.getText().toString();
 
         boolean cancel = false;
         View focusView = null;
 
-        // Check for a valid password, if the user entered one.
+        // Checar se a senha é válida ou se o usuário preencheu o campo
         if (!TextUtils.isEmpty(password) && !isPasswordValid(password)) {
             mPasswordView.setError(getString(R.string.error_invalid_password));
             focusView = mPasswordView;
             cancel = true;
         }
 
-        // Check for a valid email address.
+        // Checar se o e-mail é válida ou se o usuário preencheu o campo
         if (TextUtils.isEmpty(email)) {
             mEmailView.setError(getString(R.string.error_field_required));
             focusView = mEmailView;
@@ -187,12 +189,10 @@ public class MainActivity extends AppCompatActivity implements LoaderCallbacks<C
         }
 
         if (cancel) {
-            // There was an error; don't attempt login and focus the first
-            // form field with an error.
+            //Houve algum erro; não efetua o login e põe o foco no primeiro campo com erro
             focusView.requestFocus();
         } else {
-            // Show a progress spinner, and kick off a background task to
-            // perform the user login attempt.
+            // Mostrar icone de carregando e começar uma tarefa em segundo plano para efetuar o login
             showProgress(true);
             mAuthTask = new UserLoginTask(email, password);
             mAuthTask.execute((Void) null);
@@ -215,12 +215,14 @@ public class MainActivity extends AppCompatActivity implements LoaderCallbacks<C
 
     /**
      * Shows the progress UI and hides the login form.
+     * Mostrar a tela de progresso (?) e esconder o formulário de login
      */
     @TargetApi(Build.VERSION_CODES.HONEYCOMB_MR2)
     private void showProgress(final boolean show) {
         // On Honeycomb MR2 we have the ViewPropertyAnimator APIs, which allow
         // for very easy animations. If available, use these APIs to fade-in
         // the progress spinner.
+        // Várias coisas, mas basicamente animações pra deixar mais bonitinho
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB_MR2) {
             int shortAnimTime = getResources().getInteger(android.R.integer.config_shortAnimTime);
 
@@ -244,6 +246,7 @@ public class MainActivity extends AppCompatActivity implements LoaderCallbacks<C
         } else {
             // The ViewPropertyAnimator APIs are not available, so simply show
             // and hide the relevant UI components.
+            // Mais animações
             mProgressView.setVisibility(show ? View.VISIBLE : View.GONE);
             mLoginFormView.setVisibility(show ? View.GONE : View.VISIBLE);
         }
@@ -296,6 +299,7 @@ public class MainActivity extends AppCompatActivity implements LoaderCallbacks<C
 
     private void addEmailsToAutoComplete(List<String> emailAddressCollection) {
         //Create adapter to tell the AutoCompleteTextView what to show in its dropdown list.
+        // Não entendi isso aqui não
         ArrayAdapter<String> adapter =
                 new ArrayAdapter<>(MainActivity.this,
                         android.R.layout.simple_dropdown_item_1line, emailAddressCollection);
@@ -304,8 +308,7 @@ public class MainActivity extends AppCompatActivity implements LoaderCallbacks<C
     }
 
     /**
-     * Represents an asynchronous login/registration task used to authenticate
-     * the user.
+     * Representa uma tarefa assíncrona de login/registro para autenticar o usuário
      */
     public class UserLoginTask extends AsyncTask<Void, Void, Boolean> {
 

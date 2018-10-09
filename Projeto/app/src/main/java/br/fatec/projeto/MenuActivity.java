@@ -54,19 +54,19 @@ public class MenuActivity extends AppCompatActivity
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
+        // Preencher o menu(?); isso adiciona itens para a barra de ações se ela está presente
         getMenuInflater().inflate(R.menu.menu, menu);
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
+        // Controla os cliques nos itens da barra de açoes. A barra de ações vai
+        // controla automaticamente os cliques no botão Home/Voltar, de acordo com
+        // o especificado no AndroidManifest.xml
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
+        //noinspection SimplifiableIfStatement (entendi isso aqui não)
         if (id == R.id.action_settings) {
             return true;
         }
@@ -77,11 +77,12 @@ public class MenuActivity extends AppCompatActivity
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
-        // Handle navigation view item clicks here.
+        // Controlar os cliques nos itens da barra lateral
         int id = item.getItemId();
 
+        // Realizar as ações para cada item do menu lateral
         if (id == R.id.nav_sobre) {
-            // Handle the camera action
+
         } else if (id == R.id.nav_servicos) {
 
         }else if (id == R.id.nav_sair) {
