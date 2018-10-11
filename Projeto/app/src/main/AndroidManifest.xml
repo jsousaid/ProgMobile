@@ -29,7 +29,16 @@
         <activity
             android:name=".MenuActivity"
             android:label="@string/title_activity_menu"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ServicosActivity"
+            android:parentActivityName=".MenuActivity" />
+        <activity
+            android:name=".BanhoTosaActivity"
+            android:parentActivityName=".ServicosActivity" />
+        <activity android:name=".AdestramentoActivity" />
+        <activity android:name=".ServicosMedicosActivity" />
+        <activity android:name=".HospedagemActivity"></activity>
     </application>
 
 </manifest>

@@ -4,13 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".MenuActivity"
-    tools:showIn="@layout/app_bar_menu">
-
-    <include
-        layout="@layout/activity_sobre"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+    tools:context=".AdestramentoActivity">
 
 </android.support.constraint.ConstraintLayout>

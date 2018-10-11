@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:backgroundTint="@color/colorGrey"
+    tools:context=".ServicosActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:adjustViewBounds="true"
+                android:maxWidth="1800dp"
+                android:maxHeight="1800dp"
+                android:scaleType="fitStart"
+                android:src="@drawable/banho_e_tosa" />
+
+            <Button
+                android:id="@+id/btn_banho_tosa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:backgroundTint="@color/colorPrimaryDark"
+                android:text="@string/btn_banho_tosa"
+                android:textColor="@color/colorWhite" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:adjustViewBounds="true"
+                android:maxWidth="1800dp"
+                android:maxHeight="1800dp"
+                android:scaleType="fitStart"
+                android:src="@drawable/adestramento" />
+
+            <Button
+                android:id="@+id/btn_adestramento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:backgroundTint="@color/colorPrimaryDark"
+                android:text="@string/btn_adestramento"
+                android:textColor="@color/colorWhite" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:adjustViewBounds="true"
+                android:maxWidth="1800dp"
+                android:maxHeight="1800dp"
+                android:scaleType="fitStart"
+                android:src="@drawable/veterinario" />
+
+            <Button
+                android:id="@+id/btn_serv_medicos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:backgroundTint="@color/colorPrimaryDark"
+                android:text="@string/btn_serv_medicos"
+                android:textColor="@color/colorWhite" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:adjustViewBounds="true"
+                android:maxWidth="1800dp"
+                android:maxHeight="1800dp"
+                android:scaleType="fitStart"
+                android:src="@drawable/hospedagem" />
+
+            <Button
+                android:id="@+id/btn_hospedagem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:backgroundTint="@color/colorPrimaryDark"
+                android:text="@string/btn_hospedagem"
+                android:textColor="@color/colorWhite" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,5 +1,6 @@
 package br.fatec.projeto;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -20,17 +21,19 @@ public class MenuActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar.setTitle("Sobre");
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+        //FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        //fab.setOnClickListener(new View.OnClickListener() {
+        //    @Override
+        //    public void onClick(View view) {
+        //        Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+        //                .setAction("Action", null).show();
+        //   }
+        //});
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -54,24 +57,12 @@ public class MenuActivity extends AppCompatActivity
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Preencher o menu(?); isso adiciona itens para a barra de ações se ela está presente
-        getMenuInflater().inflate(R.menu.menu, menu);
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Controla os cliques nos itens da barra de açoes. A barra de ações vai
-        // controla automaticamente os cliques no botão Home/Voltar, de acordo com
-        // o especificado no AndroidManifest.xml
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement (entendi isso aqui não)
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
+        return true;
     }
 
     @SuppressWarnings("StatementWithEmptyBody")
@@ -81,12 +72,13 @@ public class MenuActivity extends AppCompatActivity
         int id = item.getItemId();
 
         // Realizar as ações para cada item do menu lateral
-        if (id == R.id.nav_sobre) {
-
-        } else if (id == R.id.nav_servicos) {
-
-        }else if (id == R.id.nav_sair) {
-
+        if (id == R.id.nav_servicos) {
+            Intent servicosIntent = new Intent(getApplicationContext(), ServicosActivity.class);
+            startActivity(servicosIntent);
+        } else if (id == R.id.nav_sair) {
+            Intent loginIntent = new Intent(getApplicationContext(), MainActivity.class);
+            startActivity(loginIntent);
+            finish();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
