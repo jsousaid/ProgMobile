@@ -10,7 +10,7 @@ public class ServicosMedicosActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_servicos_medicos);
 
-        // Colocar setinha pra voltar na tela sobre
+        // Colocar setinha pra voltar na tela serviços
         getSupportActionBar().setTitle("Serviços Médicos");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }

@@ -10,7 +10,7 @@ public class AdestramentoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_adestramento);
 
-        // Colocar setinha pra voltar na tela sobre
+        // Colocar setinha pra voltar na tela servicos
         getSupportActionBar().setTitle("Adestramento");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }

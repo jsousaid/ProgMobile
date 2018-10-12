@@ -34,6 +34,10 @@
     <string name="nav_header_title">Nosso Petshop</string>
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
+    <string name="mItem_agendamento">Agendamento</string>
+    <string name="mItem_servicos">Serviços</string>
+    <string name="mItem_conta">Conta</string>
+    <string name="mItem_sair">Sair</string>
 
     <!--Strings da página de serviços-->
     <string name="btn_banho_tosa">Banho e Tosa</string>

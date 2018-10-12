@@ -72,7 +72,10 @@ public class MenuActivity extends AppCompatActivity
         int id = item.getItemId();
 
         // Realizar as ações para cada item do menu lateral
-        if (id == R.id.nav_servicos) {
+        if (id == R.id.nav_agendamento) {
+            Intent agendamentoIntent = new Intent(getApplicationContext(), AgendamentoActivity.class);
+            startActivity(agendamentoIntent);
+        } else if (id == R.id.nav_servicos) {
             Intent servicosIntent = new Intent(getApplicationContext(), ServicosActivity.class);
             startActivity(servicosIntent);
         } else if (id == R.id.nav_sair) {

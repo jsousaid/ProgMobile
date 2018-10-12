@@ -10,7 +10,7 @@ public class BanhoTosaActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_banho_tosa);
 
-        // Colocar setinha pra voltar na tela sobre
+        // Colocar setinha pra voltar na tela serviços
         getSupportActionBar().setTitle("Banho e Tosa");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
