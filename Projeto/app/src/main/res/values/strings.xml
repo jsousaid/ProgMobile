@@ -45,6 +45,20 @@
     <string name="btn_serv_medicos">Seviços Médicos</string>
     <string name="btn_hospedagem">Hospedagem</string>
 
+    <string name="adestramento_content">Existem diversos tipos de adestramentos que podem ser oferecidos. Assim como, existem animais que possuem maiores propensões para cada um deles.
+No entanto, o adestramento em domicílio mais comum é o de educação, que busca corrigir distúrbios comportamentais. E esse qualquer cão pode participar.
+Vale salientar, que em qualquer dessas categorias, os donos também precisam passar por uma preparação para que o serviço funcione e se perpetue no comportamento do pet.
+Algumas das principais categorias de adestramento são: Caça, Condução, Educação, Exibição, Pastoreamento, Proteção e Salvamento</string>
+
+    <string name="banho_tosa_content">O banho e tosa de cães são ferramentas importantes para manter a saúde do cãozinho e evitar problemas de saúde tanto do animal, quanto do seu dono.
+         Pulgas, carrapatos e todo tipo de bactéria ou doença de pelos e pele podem ser facilmente evitadas para que o dono não precise gastar mais tendo que tratá-las.</string>
+
+    <string name="hospedagem_content">Um animal de estimação não pode ficar sozinho por muito tempo e por isso muitos donos deixam de viajar. Mas no pet shop também pode haver o serviço de hospedagem,
+        ou o famoso hotel para cachorro. A partir do pagamento de diárias você pode deixar o seu bichinho lá sabendo que ele será bem atendido e terá a companhia de outros bichinhos na hora da recreação.</string>
+
+    <string name="serv_medicos_content">Veterinários também estão presentes em pet shop e efetuam tanto o serviço de consultas marcadas como o de atendimento em pronto socorro.
+        Alguns desses estabelecimentos ficam abertos 24h e estarão disponíveis caso ocorra um problema durante a madrugada, um final de semana ou feriado e o veterinário que atende o seu bichinho não esteja disponível. Vele alertar que o valor de uma consulta pode ser muito alto, então se o seu animal tiver plano de saúde, vale a pena procurar um local que aceite.</string>
+
     <!--Strings da página de agendamento-->
     <string name="title_agendamento">Agendamento</string>
     <string-array name="array_servicos">
@@ -59,8 +73,14 @@
     <string name="rdb_busca">Busque</string>
     <string name="rdb_levar">Levarei</string>
     <string name="legenda_adcicionais">Adicionais*</string>
+    <string name="legenda_data">Data*</string>
     <string name="obs_adicionais">alguns adicionais podem não estar disponível para o(s) serviço(s) selecionado(s)</string>
+    <string name="obs_data">sujeito a aprovação</string>
     <string name="chk_gravatinha_dobro">Gravatinha em dobro</string>
     <string name="chk_treinamento_rapido">Treinamento rápido</string>
     <string name="btn_finaliza">Agendar</string>
+
+    <!-- Strings relarionadas a pagina de sucesso-->
+    <string name="txt_sucesso">Sucesso</string>
+    <string name="btn_confirma">Confirma</string>
 </resources>

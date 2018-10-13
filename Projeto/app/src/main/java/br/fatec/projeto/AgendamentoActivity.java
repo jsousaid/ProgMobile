@@ -1,12 +1,15 @@
 package br.fatec.projeto;
 
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.view.ContextMenu;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -72,5 +75,41 @@ public class AgendamentoActivity extends AppCompatActivity {
                 txtTotal.setText("Total: R$" + String.format("%.2f", valorTotal));
             }
         });
+
+        Button finalizarButton = (Button) findViewById(R.id.btn_finaliza);
+        finalizarButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog.Builder agendamentoDialog = new AlertDialog.Builder(AgendamentoActivity.this);
+                agendamentoDialog.setTitle("Finalizado");
+                agendamentoDialog.setMessage("Seu agendamento foi finalizado com sucesso! Em breve entraremos em contato para maiores informações.");
+                agendamentoDialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        teste();
+                    }
+                });
+                agendamentoDialog.show();
+            }
+        });
+    }
+    private void teste() {
+        EditText editData = (EditText) findViewById(R.id.edt_data);
+        String data = editData.getText().toString();
+        String servicos = "";
+
+        for (int j = 0; j < servicosSelecionados.size(); j++) {
+            servicos += servicosSelecionados.get(j).getDescricao();
+
+            if (j < servicosSelecionados.size() - 1)
+                servicos += ", ";
+        }
+
+        Intent sucessoIntent = new Intent(getApplicationContext(), SucessoActivity.class);
+        sucessoIntent.putExtra("data", data);
+        sucessoIntent.putExtra("servicos", servicos);
+        sucessoIntent.putExtra("total", String.format("%.2f", valorTotal));
+        startActivity(sucessoIntent);
+        finish();
     }
 }
