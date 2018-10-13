@@ -44,4 +44,23 @@
     <string name="btn_adestramento">Adestramento</string>
     <string name="btn_serv_medicos">Seviços Médicos</string>
     <string name="btn_hospedagem">Hospedagem</string>
+
+    <!--Strings da página de agendamento-->
+    <string name="title_agendamento">Agendamento</string>
+    <string-array name="array_servicos">
+        <item>Adestramento</item>
+        <item>Banho e Tosa</item>
+        <item>Consulta Veterinária</item>
+        <item>Hospedagem</item>
+    </string-array>
+    <string name="btn_add">Add</string>
+    <string name="legenda_radios">Transporte do Animal</string>
+    <string name="txt_ou">ou</string>
+    <string name="rdb_busca">Busque</string>
+    <string name="rdb_levar">Levarei</string>
+    <string name="legenda_adcicionais">Adicionais*</string>
+    <string name="obs_adicionais">alguns adicionais podem não estar disponível para o(s) serviço(s) selecionado(s)</string>
+    <string name="chk_gravatinha_dobro">Gravatinha em dobro</string>
+    <string name="chk_treinamento_rapido">Treinamento rápido</string>
+    <string name="btn_finaliza">Agendar</string>
 </resources>
