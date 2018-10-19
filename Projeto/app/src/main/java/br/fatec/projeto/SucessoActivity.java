@@ -12,6 +12,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Switch;
 import android.widget.TextView;
 
 public class SucessoActivity extends AppCompatActivity {
@@ -39,7 +40,10 @@ public class SucessoActivity extends AppCompatActivity {
         confirmaButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                criarNotificacao("Agendamento Finalizado", "Em breve entraremos em contato em seu e-mail cadastrado para maiores informações.");
+                Switch notificacaoSwitch = (Switch) findViewById(R.id.switch_notifica);
+                if (notificacaoSwitch.isChecked()) {
+                    criarNotificacao("Agendamento Finalizado", "Em breve entraremos em contato em seu e-mail cadastrado para maiores informações.");
+                }
 
                 Intent menuIntent = new Intent(getApplicationContext(), MenuActivity.class);
                 startActivity(menuIntent);
@@ -49,7 +53,7 @@ public class SucessoActivity extends AppCompatActivity {
 
     }
 
-    private void criarNotificacao(String titulo, String texto){
+    private void criarNotificacao(String titulo, String texto) {
 
         // 01. Definir as propriedades da Notificação
         final int NOTIFICATION_ID = 123;

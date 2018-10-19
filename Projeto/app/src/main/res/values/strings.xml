@@ -83,4 +83,5 @@ Algumas das principais categorias de adestramento são: Caça, Condução, Educa
     <!-- Strings relarionadas a pagina de sucesso-->
     <string name="txt_sucesso">Sucesso</string>
     <string name="btn_confirma">Confirma</string>
+    <string name="txt_switch">Deseja receber notificações sobre seu agendamento?</string>
 </resources>
