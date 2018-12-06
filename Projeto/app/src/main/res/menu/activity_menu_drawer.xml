@@ -9,9 +9,19 @@
             android:icon="@drawable/baseline_schedule_24"
             android:title="@string/mItem_agendamento" />
         <item
-            android:id="@+id/nav_servicos"
+            android:id="@+id/nav_servicos_prestados"
             android:icon="@drawable/baseline_grade_24"
-            android:title="@string/mItem_servicos" />
+            android:title="@string/mItem_servicosPrestados" />
+
+        <item
+            android:id="@+id/nav_cadastro_servicos"
+            android:icon="@drawable/baseline_add_circle_outline_24"
+            android:title="@string/mItem_cadastroServicos" />
+
+        <item
+            android:id="@+id/nav_find_us"
+            android:icon="@drawable/baseline_location_on_24"
+            android:title="@string/mItem_findus" />
     </group>
 
     <item android:title="@string/mItem_conta">

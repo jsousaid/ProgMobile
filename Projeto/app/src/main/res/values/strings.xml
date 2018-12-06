@@ -35,7 +35,9 @@
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="mItem_agendamento">Agendamento</string>
-    <string name="mItem_servicos">Serviços</string>
+    <string name="mItem_servicosPrestados">Serviços Prestados</string>
+    <string name="mItem_cadastroServicos">Cadastro de Serviços</string>
+    <string name="mItem_findus">Encontre-nos</string>
     <string name="mItem_conta">Conta</string>
     <string name="mItem_sair">Sair</string>
 
@@ -61,12 +63,7 @@ Algumas das principais categorias de adestramento são: Caça, Condução, Educa
 
     <!--Strings da página de agendamento-->
     <string name="title_agendamento">Agendamento</string>
-    <string-array name="array_servicos">
-        <item>Adestramento</item>
-        <item>Banho e Tosa</item>
-        <item>Consulta Veterinária</item>
-        <item>Hospedagem</item>
-    </string-array>
+    <string name="legenda_servicos">Serviços</string>
     <string name="btn_add">Add</string>
     <string name="legenda_radios">Transporte do Animal</string>
     <string name="txt_ou">ou</string>
@@ -84,4 +81,9 @@ Algumas das principais categorias de adestramento são: Caça, Condução, Educa
     <string name="txt_sucesso">Sucesso</string>
     <string name="btn_confirma">Confirma</string>
     <string name="txt_switch">Deseja receber notificações sobre seu agendamento?</string>
+
+    <!-- Strings do cadastro de servicos-->
+    <string name="txt_descricao">Descrição</string>
+    <string name="txt_preco">Preço</string>
+    <string name="title_activity_maps">Map</string>
 </resources>

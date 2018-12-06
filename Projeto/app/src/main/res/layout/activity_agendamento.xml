@@ -6,11 +6,12 @@
     android:layout_height="match_parent"
     android:layout_margin="5dp"
     android:orientation="vertical"
-    tools:context=".AgendamentoActivity">
+    tools:context=".view.AgendamentoActivity">
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -19,7 +20,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/mItem_servicos" />
+                android:text="@string/legenda_servicos" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -30,7 +31,6 @@
                     android:id="@+id/spn_servicos"
                     android:layout_width="270dp"
                     android:layout_height="wrap_content"
-                    android:entries="@array/array_servicos"
                     android:spinnerMode="dialog" />
 
                 <Button
@@ -67,13 +67,13 @@
                 android:text="@string/legenda_radios" />
 
             <RadioGroup
-                android:id="@+id/rdgTamanho"
+                android:id="@+id/rdg_transporte"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <RadioButton
-                    android:id="@+id/rdbPequeno"
+                    android:id="@+id/rdb_busque"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/rdb_busca"
@@ -86,7 +86,7 @@
                     android:text="@string/txt_ou" />
 
                 <RadioButton
-                    android:id="@+id/rdbMedio"
+                    android:id="@+id/rdb_leve"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/rdb_levar"
@@ -111,14 +111,14 @@
                 android:textSize="8dp" />
 
             <CheckBox
-                android:id="@+id/ckbBorda"
+                android:id="@+id/ckb_gravatinha"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/chk_gravatinha_dobro"
                 android:textSize="12dp" />
 
             <CheckBox
-                android:id="@+id/ckbQueijo"
+                android:id="@+id/ckb_treinamento"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/chk_treinamento_rapido"

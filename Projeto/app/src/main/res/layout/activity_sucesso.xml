@@ -7,7 +7,7 @@
     android:layout_margin="5dp"
     android:orientation="vertical"
     android:backgroundTint="@color/colorWhite"
-    tools:context=".SucessoActivity">
+    tools:context=".view.SucessoActivity">
 
     <ImageView
         android:layout_width="wrap_content"

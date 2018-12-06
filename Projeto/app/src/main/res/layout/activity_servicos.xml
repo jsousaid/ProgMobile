@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:backgroundTint="@color/colorGrey"
-    tools:context=".ServicosActivity">
+    tools:context=".view.ServicosActivity">
 
     <ScrollView
         android:layout_width="match_parent"
